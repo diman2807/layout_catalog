@@ -60,6 +60,7 @@ $grey-color: #616070;
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
+    transition: color 0.3s;
 
     &:hover {
       color: $blue-color;
@@ -83,10 +84,10 @@ $grey-color: #616070;
 }
 
 .catalog {
-  padding: 50px 40px 72px;
+  padding: 50px 40px;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-  gap: 46px 48px;
+  gap: 48px 46px;
 
   &__card {
     width: 200px;
@@ -113,6 +114,7 @@ $grey-color: #616070;
       font-weight: 500;
       line-height: 18px;
       margin-bottom: 4px;
+      transition: color 0.3s;
     }
 
     &-descr {
@@ -146,7 +148,7 @@ $grey-color: #616070;
     &-stars {
       display: flex;
 
-      .star {
+      .catalog__card-star {
         width: 16px;
         height: 16px;
         background-image: url('../images/star.svg');
@@ -155,7 +157,7 @@ $grey-color: #616070;
         margin-right: 4px;
       }
 
-      .star:nth-child(-n + 4) {
+      .catalog__card-star:nth-child(-n + 4) {
         background-image: url('../images/star-active.svg');
       }
     }
@@ -165,7 +167,7 @@ $grey-color: #616070;
       justify-content: space-between;
       margin-bottom: 16px;
 
-      p:first-child {
+      .catalog__card-price-label {
         color: $grey-color;
         font-size: 12px;
         font-style: normal;
@@ -173,7 +175,7 @@ $grey-color: #616070;
         line-height: 18px;
       }
 
-      p:last-child {
+      .catalog__card-price-value {
         color: $main-color;
         text-align: right;
         font-size: 16px;
@@ -195,6 +197,7 @@ $grey-color: #616070;
       line-height: 16px;
       text-transform: uppercase;
       color: #fff;
+      transition: color 0.3s;
     }
 
     &:hover {
@@ -224,7 +227,7 @@ $grey-color: #616070;
   .catalog {
     grid-template: 1fr / repeat(3, 200px);
     justify-content: center;
-    gap: 46px 48px;
+    gap: 48px 46px;
     padding-inline: 30px;
   }
 }
@@ -232,7 +235,7 @@ $grey-color: #616070;
 @media (min-width: 488px) and (max-width: 767px) {
   .catalog {
     grid-template: 1fr / repeat(2, 200px);
-    gap: 46px 48px;
+    gap: 48px 46px;
     justify-content: center;
   }
 }
@@ -240,7 +243,7 @@ $grey-color: #616070;
 @media (min-width: 320px) and (max-width: 487px) {
   .catalog {
     grid-template: 1fr / 200px;
-    gap: 30px;
+    row-gap: 48px;
     justify-content: center;
   }
 }
